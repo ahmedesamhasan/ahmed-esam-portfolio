@@ -1,0 +1,371 @@
+/* ===========================================================
+   Ahmed Esam Portfolio – Clean Modern Style
+   Fully Rebuilt from Scratch
+   =========================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===========================
+   GENERAL
+=========================== */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #040404;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: #040404 url('../img/bg.jpg') center center/cover no-repeat;
+  z-index: -1;
+}
+
+/* ===========================
+   LINKS & TITLES
+=========================== */
+a {
+  color: #18d26e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #35e888;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+#header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+#header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+#header h1 a {
+  color: #fff;
+}
+
+#header h2 {
+  font-size: 24px;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#header h2 span {
+  color: #fff;
+  border-bottom: 2px solid #18d26e;
+}
+
+/* SOCIAL LINKS */
+#header .social-links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#header .social-links a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: 0.3s;
+}
+
+#header .social-links a:hover {
+  background: #18d26e;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+  margin-top: 40px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.navbar li + li {
+  margin-left: 30px;
+}
+
+.navbar a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  transition: 0.3s;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar a:hover,
+.navbar .active {
+  color: #fff;
+}
+
+.navbar a::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #18d26e;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar a:hover::before,
+.navbar .active::before {
+  width: 25px;
+}
+
+/* MOBILE NAV */
+.mobile-nav-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar.navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .navbar.navbar-mobile li {
+    padding: 10px 0;
+  }
+}
+
+/* ===========================
+   SECTIONS GENERAL
+=========================== */
+section {
+  padding: 80px 0;
+  position: relative;
+}
+
+section .container {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  border-radius: 6px;
+}
+
+/* ===========================
+   SECTION TITLES
+=========================== */
+.section-title h2 {
+  font-size: 14px;
+  color: #aaa;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.section-title h2::after {
+  content: '';
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #18d26e;
+  margin-left: 10px;
+}
+
+.section-title p {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: -10px;
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+.about-me .content h3 {
+  font-size: 26px;
+  color: #18d26e;
+  font-weight: 700;
+}
+
+.about-me ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-me ul li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* ===========================
+   SKILLS
+=========================== */
+.skills .progress {
+  background: none;
+  height: 60px;
+}
+
+.skills .progress .skill {
+  font-weight: 600;
+}
+
+.skills .progress-bar-wrap {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.skills .progress-bar {
+  height: 10px;
+  background: #18d26e;
+  transition: 1s;
+}
+
+/* ===========================
+   SERVICES
+=========================== */
+.services .icon-box {
+  background: rgba(204, 204, 204, 0.1);
+  text-align: center;
+  padding: 60px 20px;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+
+.services .icon-box:hover {
+  background: #18d26e;
+}
+
+.services .icon i {
+  font-size: 32px;
+  color: #fff;
+}
+
+/* ===========================
+   PORTFOLIO
+=========================== */
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio .portfolio-wrap {
+  overflow: hidden;
+  position: relative;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.portfolio .portfolio-wrap img {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.portfolio .portfolio-wrap:hover img {
+  transform: scale(1.15);
+  opacity: 0.4;
+}
+
+.portfolio .portfolio-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio .portfolio-links a {
+  font-size: 28px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-links a:hover {
+  color: #35e888;
+}
+
+/* ===========================
+   TESTIMONIALS
+=========================== */
+.testimonials .testimonial-item {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+.contact .info-box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* ===========================
+   FOOTER CREDITS
+=========================== */
+.credits {
+  text-align: right;
+  padding: 15px;
+  font-size: 13px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
